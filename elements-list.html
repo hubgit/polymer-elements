@@ -1,0 +1,21 @@
+<polymer-element name="elements-list" attributes="version" noscript>
+    <template>
+        <core-ajax auto
+            url="https://api.github.com/repos/hubgit/polymer-elements/contents/{{ version }}"
+            headers='{"Accept":"application/vnd.github.v3+json"}'
+            handleAs="json"
+            response="{{ items }}"></core-ajax>
+
+        <template if="{{ !items }}">
+            <div>Loading…</div>
+        </template>
+
+        <template repeat="{{ items }}">
+            <template if="{{ type == 'dir' }}">
+                <div>
+                    <a href="http://git.macropus.org/polymer-elements/{{ path }}">{{ name }}</a>
+                </div>
+            </template>
+        </template>
+    </template>
+</polymer-element>
