@@ -1,10 +1,8 @@
 {
   "name": "polymer-elements",
+  "private": true,
   "version": "0.5.5",
   "homepage": "https://github.com/hubgit/polymer-elements",
-  "authors": [
-    "Alf Eaton <eaton.alf@gmail.com>"
-  ],
   "license": "BSD",
   "dependencies": {
     "polymer": "Polymer/polymer#0.5.5",
